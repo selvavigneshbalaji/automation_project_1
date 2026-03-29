@@ -1,0 +1,28 @@
+
+environments:
+  dev:
+    base_url: "https://demo.automationtesting.in/"
+    browser: "chrome"
+    headless: false
+    implicit_wait: 5
+    explicit_wait: 10
+    page_load_timeout: 15
+    api_base_url: "https://reqres.in"
+browser_options:
+  chrome:
+    - "--disable-blink-features=AutomationControlled"
+    - "--disable-web-resources"
+    - "--no-sandbox"
+    - "--disable-dev-shm-usage"
+
+retry_config:
+  max_retries: 3
+  retry_interval: 1000  # milliseconds
+  backoff_multiplier: 2
+
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  log_file: "logs/automation.log"
+  file_level: "DEBUG"
+  console_level: "INFO"

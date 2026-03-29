@@ -1,0 +1,10 @@
+{
+  "valid_users": [
+    {
+      "test_id": "TC001",
+      "username": "demousername",
+      "password": "demopassword",
+      "description": "Valid login credentials"
+    }
+    ]
+}
