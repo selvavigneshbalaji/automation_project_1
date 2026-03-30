@@ -1,4 +1,5 @@
-pytest
 selenium
-pyaml
+webdriver-manager
+pyyaml
 colorlog
+pytest

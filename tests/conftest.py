@@ -2,7 +2,9 @@ import pytest
 from selenium import webdriver
 from src.utilities.loggers import get_logger
 from src.config.config import  config
-
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.options import Options as ChromeOptions
+from selenium.webdriver.chrome.service import Service as ChromeService
 import os
 logger = get_logger(__name__)
 
@@ -31,7 +33,10 @@ def pytest_runtest_makereport(item, call):
 def setup(request):
     browser = request.config.getoption("--browser",default=config.get_browser)
     print(browser)
-    driver=webdriver.Chrome()
+    options=ChromeOptions()
+    options.add_argument("--headless")
+    service =ChromeService(ChromeDriverManager().install())
+    driver=webdriver.Chrome(service=service,options=options)
     print("Session Started")
     yield driver
     driver.quit()
