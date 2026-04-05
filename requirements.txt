@@ -3,3 +3,6 @@ webdriver-manager
 pyyaml
 colorlog
 pytest
+pytest-xdist
+pytest-html
+
