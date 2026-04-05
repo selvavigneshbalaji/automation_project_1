@@ -16,7 +16,7 @@ def pytest_runtest_setup(item):
     logger.info(f"{'=' * 80}")
 
 
-def pytest_runtest_teardown(item, nextitem):
+def pytest_runtest_teardown(item):
 
     logger.info(f"{'=' * 80}")
     logger.info(f"TEST END: {item.name}")
@@ -29,7 +29,7 @@ def pytest_runtest_makereport(item, call):
         logger.error(f"Error: {call.excinfo.value}")
 
 
-@pytest.fixture
+@pytest.fixture(scope="session")
 def setup(request):
     browser = request.config.getoption("--browser",default=config.get_browser)
     print(browser)

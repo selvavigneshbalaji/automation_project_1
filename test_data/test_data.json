@@ -5,6 +5,24 @@
       "username": "demousername",
       "password": "demopassword",
       "description": "Valid login credentials"
+    },
+    {
+      "test_id": "TC002",
+      "username": "demousername",
+      "password": "demopassword",
+      "description": "Valid login credentials"
+    },
+    {
+      "test_id": "TC003",
+      "username": "demousername",
+      "password": "demopassword",
+      "description": "Valid login credentials"
+    },
+    {
+      "test_id": "TC004",
+      "username": "demousername",
+      "password": "demopassword",
+      "description": "Valid login credentials"
     }
     ]
 }

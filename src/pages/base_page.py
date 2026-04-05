@@ -14,3 +14,8 @@ class BasePage:
     def send_text(self,element,text):
         self.wait.until(EC.presence_of_element_located(element)).send_keys(text)
 
+    def switch_to_frame(self,element):
+        ele=self.wait.until(EC.presence_of_element_located(element))
+        self.driver.switch_to.frame(ele)
+    def switch_to_default_content(self):
+        self.driver.switch_to.default_content()

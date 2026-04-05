@@ -12,7 +12,7 @@ class FileReader:
             with open(file_path, 'r', encoding='utf-8') as f:
                 data = json.load(f)
             logger.info(f"Successfully read JSON file with {len(data)} items")
-            return data
+            return data["valid_users"]
         except FileNotFoundError:
             logger.error(f"JSON file not found: {file_path}")
             raise "error"
